@@ -120,6 +120,7 @@
       lpTag.identities.push(identityFn);
       function identityFn(callback) {
         callback({
+          "sub": "+972-3-5555-555",
           "iss": "https://jwt.io/",
           "aud":"acc:qa57221676",
           "exp": 1992025992,
@@ -128,7 +129,7 @@
       });
     }
 
-    var id_token = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJWaXNoYWxfODI1ODE4IiwiaXNzIjoiaHR0cHM6Ly9qd3QuaW8vIiwiYXVkIjoiYWNjOnFhNTcyMjE2NzYiLCJleHAiOjE5OTIwMjU5OTIsImlhdCI6MTY4MjAzMDk1NCwiYWNyIjoibG9hMSJ9.sIgXrJW4THO1fcsi36N8bN3BEfwHx8rCG4RnOYFHTLHJGLb9k3g2ZblDsE52xLTIQIJ4clwnT_Mu3tGmpJqm7e3CQa9KmQaTDfei8J4iMht4bw2cqyDr9HI6qWIsf_ujioDqosddySNdxtkwSX5fU8zwlImyMY6GwDZOkqUkhje8iZKIwG53Ugg9jbHqsOQrot0wH1uYHg1c4v0YWoBX3Iy9llYp3i3NdbmA0UuRk0CCEJ5nLnV1QSD9wgyNfxsaQnYVS--rubf9e9Yd70-S7-1ACmGtgFoFQhbiIzoQHdyw2zINKu7KYoaDXxsjmGDbPQ_9HnmDg_pNHarVryjzJg"
+    var id_token = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIrOTcyLTMtNTU1NS01NTUiLCJpc3MiOiJodHRwczovL2p3dC5pby8iLCJhdWQiOiJhY2M6cWE1NzIyMTY3NiIsImV4cCI6MTk5MjAyNTk5MiwiaWF0IjoxNjgyMDMwOTU0LCJhY3IiOiJsb2ExIn0.PlwjaRfrjGneMcYYmWt9pwuWaf6RPZqiSOFo1a5Vn6ZxrNjoSXyMbZfZ55fiT-M_iN4k9D8WGDQ6FK3u2V9rlBmpwB5gn7A46JnEa_BA_MDW0VrJKAmlxTBv6cYcRPR-Fpi6yDj_2o3h1CshjKumPNdVOi2T6YFGzpvKXaM_NAc9XCvgtbhK9iQ8mL7bhTBpyEDO9xBHqPFqTn7xlXSf-eMV9T9vmy5Xwr3NOD0A_3rgOPGAy36J1sLdMnr3ydqAn1kN1zBeI43c2nxqn_zHyIp4GuiafKVT2CW9AullSjrOZtrv0C4WljgnCR33wtX03hJhYhvnBLXBhJHp5heL4Q"
     
     function lpGetAuthenticationToken(callback) {
             console.log("LP asked for id_token or auth code in Code Flow");
