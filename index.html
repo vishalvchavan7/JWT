@@ -113,6 +113,7 @@
             const userProfile = await auth0Client.getUser();
             const claims = await auth0Client.getIdTokenClaims()
             console.log(claims);
+            const idToken = claims.__raw;
             console.log(claims.__raw)
 
 
@@ -188,7 +189,7 @@
 
     
    // var id_token = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIrOTcyLTMtNTU1NS01NTUiLCJpc3MiOiJodHRwczovL2p3dC5pby8iLCJhdWQiOiJhY2M6cWE1NzIyMTY3NiIsImV4cCI6MTk5MjAyNTk5MiwiaWF0IjoxNjgyMDMwOTU0LCJhY3IiOiJsb2ExIn0.PlwjaRfrjGneMcYYmWt9pwuWaf6RPZqiSOFo1a5Vn6ZxrNjoSXyMbZfZ55fiT-M_iN4k9D8WGDQ6FK3u2V9rlBmpwB5gn7A46JnEa_BA_MDW0VrJKAmlxTBv6cYcRPR-Fpi6yDj_2o3h1CshjKumPNdVOi2T6YFGzpvKXaM_NAc9XCvgtbhK9iQ8mL7bhTBpyEDO9xBHqPFqTn7xlXSf-eMV9T9vmy5Xwr3NOD0A_3rgOPGAy36J1sLdMnr3ydqAn1kN1zBeI43c2nxqn_zHyIp4GuiafKVT2CW9AullSjrOZtrv0C4WljgnCR33wtX03hJhYhvnBLXBhJHp5heL4Q"
-    var id_token = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IndpTXlFRUVwTlVVcWVuWGdHd3hiMyJ9.eyJuaWNrbmFtZSI6InZjMDA4MjU4MTgiLCJuYW1lIjoidmMwMDgyNTgxOEB0ZWNobWFoaW5kcmEuY29tIiwicGljdHVyZSI6Imh0dHBzOi8vcy5ncmF2YXRhci5jb20vYXZhdGFyL2VlNjU1ZGMwYzU1MGY1ZTI5MGI1NWE1MDZmNDQ5ZGY1P3M9NDgwJnI9cGcmZD1odHRwcyUzQSUyRiUyRmNkbi5hdXRoMC5jb20lMkZhdmF0YXJzJTJGdmMucG5nIiwidXBkYXRlZF9hdCI6IjIwMjMtMDQtMjZUMTI6NTA6MDguMjg3WiIsImVtYWlsIjoidmMwMDgyNTgxOEB0ZWNobWFoaW5kcmEuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImlzcyI6Imh0dHBzOi8vZGV2LXpnMTJ6c2J3LnVzLmF1dGgwLmNvbS8iLCJhdWQiOiJRbVZzdjlOUnIxREdvNWhlNGF0aFB6VktCZnU4RVFnQSIsImlhdCI6MTY4MjUyNTMzNiwiZXhwIjoxNjgyNTYxMzM2LCJzdWIiOiJhdXRoMHw2NDQ3OGQ3NWVkOTgwOWIwNzA0MTFjMzkiLCJzaWQiOiJqdElyMDgtdHlWZUs0alFydFk0UmVqTTlrcDF5eGs2SyIsIm5vbmNlIjoiZUhGMVV6WkVOV1IzZGs1TVN6RndOMEpKUVhSeVFUZFZSMll4Y1hoTVJuaGtkM3BUT0ZGcVRtRmlZdz09In0.pESIwDZHauYwlKuS2EBtpj1xlN2YU2O8fDr8NMmeb99L68g60jokMFAoa_z8my3uHnduFZeR9b5r3VCI8TuLxd5jcw1NRXNtbcfhn1INqL0hjQUAb5V4z1-ipkZAwLcDGy_28iwcPuExeyizxHOA3QJK2xyn1Eo_ST9SbXKIxdF2Myw8t9bPozgrDQUTe1yBwFQiynovmxL9C22a0oPU-DJ6FXoDRaVEcDeQoBS-40q42n4zOtTWeYd_Ndd5jDMoYV8ji5Y0HDOabJapcSuJpZjkUU6gqFkh5uwnc9cvEiUIRqZlNRTFWbnEz9Vz-C66HV6VoG5g-D8vu08Gxm-f3Q"
+    var id_token = idToken;
     function lpGetAuthenticationToken(callback) {
             console.log("LP asked for id_token or auth code in Code Flow");
             // Do your magic…
