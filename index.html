@@ -114,7 +114,31 @@
             const claims = await auth0Client.getIdTokenClaims()
             console.log(claims);
             const idToken = claims.__raw;
-            console.log(claims.__raw)
+            console.log(idToken)
+            
+                  lpTag.identities.push(identityFn);
+      function identityFn(callback) {
+        callback({
+          "sub": "+972-3-5555-555",
+          "iss": "https://jwt.io/",
+          "aud":"acc:qa57221676",
+          "exp": 1992025992,
+          "iat": 1682030954,
+          "acr": "loa1"
+      });
+    }
+
+    
+   // var id_token = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIrOTcyLTMtNTU1NS01NTUiLCJpc3MiOiJodHRwczovL2p3dC5pby8iLCJhdWQiOiJhY2M6cWE1NzIyMTY3NiIsImV4cCI6MTk5MjAyNTk5MiwiaWF0IjoxNjgyMDMwOTU0LCJhY3IiOiJsb2ExIn0.PlwjaRfrjGneMcYYmWt9pwuWaf6RPZqiSOFo1a5Vn6ZxrNjoSXyMbZfZ55fiT-M_iN4k9D8WGDQ6FK3u2V9rlBmpwB5gn7A46JnEa_BA_MDW0VrJKAmlxTBv6cYcRPR-Fpi6yDj_2o3h1CshjKumPNdVOi2T6YFGzpvKXaM_NAc9XCvgtbhK9iQ8mL7bhTBpyEDO9xBHqPFqTn7xlXSf-eMV9T9vmy5Xwr3NOD0A_3rgOPGAy36J1sLdMnr3ydqAn1kN1zBeI43c2nxqn_zHyIp4GuiafKVT2CW9AullSjrOZtrv0C4WljgnCR33wtX03hJhYhvnBLXBhJHp5heL4Q"
+    var id_token = idToken;
+    function lpGetAuthenticationToken(callback) {
+            console.log("LP asked for id_token or auth code in Code Flow");
+            // Do your magic…
+            // On Success
+            callback(id_token);
+            // On Failure
+            callback("", "error reason");
+        }
 
 
             // Assumes an element with id "profile" in the DOM
