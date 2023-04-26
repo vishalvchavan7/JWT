@@ -202,6 +202,7 @@
     //   // Initialize the lpTag namespace and the identity array, if the identity function is placed above the tag.
       // var lpTag = {};
        //lpTag.identities = [];
+      globalFunction();
       console.log(id_token);
       lpTag.identities.push(identityFn);
       function identityFn(callback) {
