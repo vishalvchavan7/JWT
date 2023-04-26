@@ -115,6 +115,10 @@
             console.log(claims);
             var id_token = claims.__raw;
             console.log("THIS IS ID_TOKEN"+id_token)
+            function globalFunction() {
+              id_token = claims.__raw;
+            }
+            globalFunction();
             
             
             // Assumes an element with id "profile" in the DOM
