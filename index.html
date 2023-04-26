@@ -92,6 +92,14 @@
               e.preventDefault();
               auth0Client.loginWithRedirect();
             });
+            
+            auth0.getIdTokenClaims({
+            domain: "dev-zg12zsbw.us.auth0.com",
+            clientId: "QmVsv9NRr1DGo5he4athPzVKBfu8EQgA",
+            authorizationParams: {
+              redirect_uri: window.location.origin
+            }
+          })
 
             if (location.search.includes("state=") && 
                 (location.search.includes("code=") || 
