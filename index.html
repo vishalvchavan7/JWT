@@ -78,6 +78,7 @@
     <p id="demo"></p>
      
         <script>
+          Arrayz = [];
           auth0.createAuth0Client({
             domain: "dev-zg12zsbw.us.auth0.com",
             clientId: "QmVsv9NRr1DGo5he4athPzVKBfu8EQgA",
@@ -117,6 +118,8 @@
             console.log("THIS IS ID_TOKEN"+id_token)
             function globalFunction() {
               id_token = claims.__raw;
+              Arrayz.push(id_token);
+
             }
             globalFunction();
             
@@ -203,7 +206,7 @@
       // var lpTag = {};
        //lpTag.identities = [];
       globalFunction();
-      console.log(id_token);
+      console.log(Arrayz[0]);
       lpTag.identities.push(identityFn);
       function identityFn(callback) {
         callback({
