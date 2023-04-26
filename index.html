@@ -111,8 +111,9 @@
 
             const isAuthenticated = await auth0Client.isAuthenticated();
             const userProfile = await auth0Client.getUser();
-            const claims = await auth0Client.getIdTokenClaims();
+            const claims = await auth0Client.getIdTokenClaims()
             console.log(claims);
+            console.log(claims.__raw)
 
 
             // Assumes an element with id "profile" in the DOM
